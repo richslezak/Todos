@@ -1,8 +1,30 @@
 .item {
+  position: relative;
   margin: 1rem 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  padding: 2rem 1rem 1rem;
   background-color: #f7f5ef;
   color: #201d0f;
   font-size: 1.2rem;
+}
+
+.item button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.9rem;
+  background-color: #ebb002;
+  border: 1px solid #ebb002;
+  color: #201d0f;
+  font-weight: 600;
+  padding: 0.25rem;
+  border-radius: 0 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.item button:hover,
+.item button:active {
+  background-color: #ebc002;
+  border-color: #ebc002;
 }
