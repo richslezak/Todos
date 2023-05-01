@@ -15,7 +15,7 @@ function App() {
   };
   return (
     <>
-      <h1>My Todo List</h1>
+      <h1>Todo List</h1>
       <NewTodo onAddTodo={addTodoHandler} />
       <Todos items={todos} />
     </>

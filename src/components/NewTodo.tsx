@@ -6,17 +6,24 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
+
     const enteredText = todoTextInputRef.current!.value;
+
+    const clearInput = () => {
+      return (todoTextInputRef.current!.value = '');
+    };
 
     if (enteredText.trim().length === 0) {
       return;
     }
 
     props.onAddTodo(enteredText);
+
+    clearInput();
   };
   return (
     <form onSubmit={submitHandler} className={classes.form}>
-      <label htmlFor="text">Todo Text</label>
+      <label htmlFor="text">Enter a Task</label>
       <input type="text" id="text" ref={todoTextInputRef} />
       <button>Add</button>
     </form>
