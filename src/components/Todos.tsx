@@ -3,7 +3,7 @@ import { TodosContext } from '../store/todos-context';
 import classes from './Todos.module.css';
 import { useContext } from 'react';
 
-const Todos: React.FC = () => {
+const Todos = () => {
   const todosCtx = useContext(TodosContext);
   return (
     <ul className={classes.todos}>

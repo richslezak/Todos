@@ -1,9 +1,14 @@
 import classes from './TodoItem.module.css';
-const TodoItem: React.FC<{ text: string; removeTodo: () => void }> = (props) => {
+type todoItemProps = {
+  text?: string;
+  removeTodo: () => void;
+};
+
+const TodoItem = ({ text, removeTodo }: todoItemProps) => {
   return (
     <li className={classes.item}>
-      {props.text}
-      <button onClick={props.removeTodo}>remove</button>
+      {text}
+      <button onClick={removeTodo}>remove</button>
     </li>
   );
 };
