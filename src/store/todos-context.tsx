@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, ReactNode } from 'react';
 import Todo from '../models/todo';
 
 type TodosContextObj = {
@@ -8,7 +8,7 @@ type TodosContextObj = {
 };
 
 type ProviderProps = {
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
 export const TodosContext = createContext<TodosContextObj>({
